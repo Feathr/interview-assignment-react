@@ -1,0 +1,41 @@
+{
+  "extends": ["stylelint-config-recommended", "stylelint-config-prettier", "stylelint-config-css-modules"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-same-name-blockless"],
+        "ignore": ["after-comment", "first-nested"],
+        "severity": "warning"
+      }
+    ],
+    "custom-property-empty-line-before": [
+      "always",
+      {
+        "except": ["after-custom-property"],
+        "ignore": ["after-comment", "first-nested", "inside-single-line-block"],
+        "severity": "warning"
+      }
+    ],
+    "declaration-block-no-duplicate-properties": true,
+    "declaration-empty-line-before": [
+      "always",
+      {
+        "except": ["after-declaration"],
+        "ignore": ["after-comment", "first-nested", "inside-single-line-block"],
+        "severity": "warning"
+      }
+    ],
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true,
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": ["after-comment", "first-nested"],
+        "severity": "warning"
+      }
+    ],
+    "selector-nested-pattern": "^&"
+  }
+}

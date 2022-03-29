@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import Films from './Films';
 import Film from './Films/Film';
@@ -9,27 +9,19 @@ import Person from './Persons/Person';
 function App(): JSX.Element {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path={'/'} exact={true}>
-          <Redirect
-            exact={true}
-            from={'/'}
-            to={'/films'}
-          />
+      <Routes>
+        <Route path={'/'}>
+          <Route index={true} element={<Navigate to={'films'} />} />
+          <Route path={'films'}>
+            <Route index={true} element={<Films />}></Route>
+            <Route path={':filmId'} element={<Film />}></Route>
+          </Route>
+          <Route path={'persons'}>
+            <Route index={true} element={<Persons />}></Route>
+            <Route path={':personId'} element={<Person />}></Route>
+          </Route>
         </Route>
-        <Route path={'/films'}>
-          <Films />
-        </Route>
-        <Route path={'/films/:filmId'} exact={true}>
-          <Film />
-        </Route>
-        <Route path={'/persons'}>
-          <Persons />
-        </Route>
-        <Route path={'/persons/:personId'} exact={true}>
-          <Person />
-        </Route>
-      </Switch>
+      </Routes>
     </BrowserRouter>
   );
 }
