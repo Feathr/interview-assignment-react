@@ -1,24 +1,20 @@
 # Feathr Jr. Engineer Work Assignment: A Star Wars Experience
 
 Welcome to your work assignment for the Junior Engineer role at Feathr!
-Your mission is to help Feathr keep user data safe by adding a secure
-authentication flow to this web application called "A Star Wars Experience".
+Your mission is to help Feathr learn more about Star Wars in this web application
+called "A Star Wars Experience".
 
 What does A Star Wars Experience do? It is a searchable database of Star Wars
-movies and characters. You will use a public API to pull in the data and add
-a login feature, as well as a way to mark a movie as watched. Use your
-creativity to style the project with CSS, images; go nuts. :)
+movies and characters. You will use a public API to pull in the data, and add
+a way to mark a movie as watched. Use your creativity to style the project with
+CSS, images, etc.; go nuts. :)
 We would also love to see you write some unit tests using Jest and React Testing
 Library.
 
 The basic skeleton of the application is in place. Review the files in the `src`
 directory to get an understanding of the application's architecture. It's a
-React app written in Typescript, which happens to be how we write our frontend
+React app written in Typescript, which is what we use to write our frontend
 application here at Feathr.
-
-You can implement your user authentication flow however you want, use whatever
-backing databases you want, just make sure to follow security best-practices
-to the best of your ability.
 
 Feel free to modify and add files as needed, but maintain the existing routes.
 
@@ -64,25 +60,12 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ## Requirements
 
-- [ ] A new user should be able to sign up with username and password at the `/signup` page.
-- [ ] After signing up, a user should be able to login with username and password at the `/login` page.
-- [ ] Add a global navigation component that is displayed on every page. When logged out, display a link to the `/login` page; when logged in, display a link to the `/logout` page, and the user's username.
-- [ ] Navigating to `/logout` should log the user out and take them back to `/login`.
+- [ ] Add a global navigation component that is displayed on every page.
 - [ ] Implement fetching data from `swapi.dev` for `/films`, `/film`, `/persons`, and `/person`.
 - [ ] Implement searching/filtering by title/name for `/films`, and `/persons`.
-- [ ] Implement the ability to mark a movie as watched on `/films`; this should be stored for the currently logged in user only. When logged out, hide the ability to mark a movie as watched.
+- [ ] Implement the ability to mark a movie as watched on `/films`; this should persist across restarting your browser.
 - [ ] Use CSS and icons/images/etc. to make the site look good. Go nuts. :)
 - [ ] A test for each component should be written. Create a `[ComponentName].spec.tsx` file in the same directory as the component. e.g. For `src/Films/Films.tsx` create `src/Films/Films.spec.tsx`.
 - [ ] Fill in the "Implementation" and "Limitations/Future Work" sections of the `NOTES.rst` file
@@ -91,8 +74,9 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Additional Notes
 
-In order to store user profiles and credentials, you'll need to add some sort of persistence layer to
-A Star Wars Experience. You can do this however you choose: use your browser's Local Storage or IndexedDB, or any other method you can think of.
+In order to store watched movies, you'll need to add some sort of persistence layer to A Star Wars
+Experience. You can do this however you choose: use your browser's Local Storage or IndexedDB, or
+any other method you can think of.
 
 ## Resources
 
