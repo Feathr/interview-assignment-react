@@ -12,3 +12,8 @@ Describe what shortcomings or flaws exist in the version you are submitting.
 Nothing is ever perfect and we expect some things to be left unfinished - it's
 important to be able to recognize those issues so we can come back and fix them
 later.
+
+## WCAG Standards
+
+Which WCAG standards did you implement in your app? Which standards would you
+implement if you had more time?
