@@ -1,6 +1,6 @@
-# Feathr Jr. Engineer Work Assignment: A Star Wars Experience
+# Feathr Frontend Engineer Work Assignment: A Star Wars Experience
 
-Welcome to your work assignment for the Junior Engineer role at Feathr!
+Welcome to your work assignment for the Frontend Engineer role at Feathr!
 Your mission is to help Feathr learn more about Star Wars in this web application
 called "A Star Wars Experience".
 
@@ -62,15 +62,36 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Requirements
 
+Junior:
 - [ ] Add a global navigation component that is displayed on every page.
 - [ ] Implement fetching data from `swapi.dev` for `/films`, `/film`, `/persons`, and `/person`.
 - [ ] Implement searching/filtering by title/name for `/films`, and `/persons`.
 - [ ] Implement the ability to mark a movie as watched on `/films`; this should persist across restarting your browser.
 - [ ] Use CSS and icons/images/etc. to make the site look good. Go nuts. :)
-- [ ] A test for each component should be written. Create a `[ComponentName].spec.tsx` file in the same directory as the component. e.g. For `src/Films/Films.tsx` create `src/Films/Films.spec.tsx`.
-- [ ] Fill in the "Implementation" and "Limitations/Future Work" sections of the `NOTES.rst` file
+- [ ] A test for each component should be written. Create a `[ComponentName].test.tsx` file in the same directory as the component. e.g. For `src/Films/Films.tsx` create `src/Films/Films.test.tsx`.
+- [ ] Fill in the "Implementation" and "Limitations/Future Work" sections of the `NOTES.md` file.
+
+Mid-level: 
+- [ ] All junior requirements.
+- [ ] Implement the ability to create custom tags for people and films; this should persist across restarting your browser.
+- [ ] Add a new page for `/starships` and implement fetching from `swapi.dev/api/starships`. Use appropriate error handling when necessary.
+- [ ] Component tests should be integration tests. See the Integration Testing section for more details.
+- [ ] Fill in the "WCAG Standards" section of the `NOTES.md` file.
+
+Senior:
+- [ ] All junior and mid-level requirements.
+- [ ] Impress us! This is an open-ended requirement -- we want to see what you've got.
 
 **Submit the finished project as a zip archive.**
+
+## Integration Testing
+React Testing Library focuses on testing components from the end-user's experience rather than testing the implementation and logic of the underlying React components.
+
+
+### Integration testing vs unit testing
+Integration testing is conducted after unit testing, where the functional correctness of the smallest piece of code, or unit, is tested. Each unit can be logically isolated in the software. The smaller the unit, the more granular insights unit testing can reveal.
+
+The main difference between unit testing and integration testing is that in unit testing, individual modules are tested. In integration testing, these modules are combined and tested as a single unit to check the functionality of the overall application.
 
 ## Additional Notes
 
@@ -87,3 +108,4 @@ any other method you can think of.
 - https://create-react-app.dev/docs/running-tests
 - https://create-react-app.dev/docs/fetching-data-with-ajax-requests
 - https://reactrouter.com/docs/en/v6
+- https://www.techtarget.com/searchsoftwarequality/definition/integration-testing#:~:text=Integration%20testing%20%2D%2D%20also%20known,tested%20as%20a%20combined%20entity
